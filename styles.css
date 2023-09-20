@@ -1,0 +1,296 @@
+/* Estilos gerais aplicados a todo o site */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to bottom right,rgb(217, 217, 255),rgb(236, 236, 236),rgb(153, 153, 153));
+}
+
+
+.nav-link {
+    color: #ffffff;
+    
+
+}
+
+.nav {
+    --bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: ;
+    --bs-nav-link-color: #ffffff;
+    --bs-nav-link-hover-color: #ffffff;
+    --bs-nav-link-disabled-color: var(--bs-secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+}
+
+
+header {
+    background: linear-gradient(to right, #01072d, #303866, #01072d);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background: linear-gradient(to right, #01072d, #303866, #01072d);
+    padding: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 18px;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer {
+	background-color: #07012b;
+	color: #fff;
+	padding: 40px;
+	text-align: center;
+    justify-content: space-around;
+	margin-top: 250px;
+}
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.0rem;    /* altura do rodapé */
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.0rem;            /* altura do rodapé */
+  }
+
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #000535; }
+
+    .btn-secondary {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #07012b;
+        --bs-btn-border-color: #6c757d;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #5c636a;
+        --bs-btn-hover-border-color: #565e64;
+        --bs-btn-focus-shadow-rgb: 130,138,145;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #565e64;
+        --bs-btn-active-border-color: #51585e;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #6c757d;
+        --bs-btn-disabled-border-color: #6c757d;
+    }
+
+.button-1 {
+    background-color: #07012b;
+    color: white;
+    border: none;
+    padding: 0.5rem 21rem;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+.button-1:hover {
+    background-color: #51585e;
+}
+.button-2 {
+    background-color: #07012b;
+    color: white;
+    border: none;
+    padding: 0.5rem 0,5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.button-2:hover {
+    background-color: #51585e;
+}
+
+.button-3 {
+    background-color: #07012b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.button-3:hover {
+    background-color: #51585e;
+}
+
+.button-4 {
+    background-color: #07012b;
+    color: white;
+    border: none;
+    padding: 0.5rem 21rem;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 16px;
+}
+.button-4:hover {
+    background-color: #51585e;
+}
+
+.suggestion-button {
+    background-color: #07012b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 5px;
+}
+
+.suggestion-button:hover {
+    background-color: #51585e;
+}
+
+.suggestion-button-1 {
+    background-color: #07012b;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 25px;
+}
+
+.suggestion-button-1:hover {
+    background-color: #51585e;
+}
+
+
+
+
+/* Estilos específicos para as páginas */
+.home-intro {
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
+
+.presentation {
+    background: #ffffff;
+    padding: 2rem;
+}
+
+.side-by-side {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 2rem;
+}
+
+.side-by-side .image img {
+    max-width: 50%;
+    margin-right: 2rem;
+}
+
+.side-by-side .text {
+    flex: 1;
+}
+
+.suggestion-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.suggestion-form select, .suggestion-form input[type="text"], .suggestion-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.vote-suggestion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.vote-suggestion .button {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.top-suggestions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-suggestion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 80%;
+    background-color: #f2f2f2;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.podium {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.podium .place {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.podium .top-suggestion {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
