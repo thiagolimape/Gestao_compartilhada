@@ -1,34 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Entre ou Cadastre-se</title>
     <style>
-        #likeButton {
-  padding: 20px 40px; /* Ajustando o preenchimento para aumentar o tamanho do botão */
-  font-size: 36px; /* Ajustando o tamanho da fonte para tornar o coração maior */
-  border: none;
-  cursor: pointer;
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-#likeButton:before {
-  content: "\2764"; /* Usando um caractere Unicode maior para representar o coração */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
 }
 
-#likeButton.liked {
-  color: red;
+.container h1 {
+    margin-bottom: 20px;
 }
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #45a049;
+}
+
+.signup-link {
+    margin-top: 20px;
+}
+
+.signup-link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
     </style>
-   
 </head>
 <body>
-    <button id="likeButton" onclick="toggleLike()">Curtir</button>
+    <div class="container">
+        <h1>Entre ou Cadastre-se</h1>
+
+        <!-- Formulário de Login -->
+        <div class="login-form">
+            <h2>Login</h2>
+            <form action="login.html" method="post">
+                <label for="username">Nome de usuário:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+        <!-- Link para a página de cadastro -->
+        <div class="signup-link">
+            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+        </div>
+    </div>
 </body>
-<script>
-    function toggleLike() {
-    const likeButton = document.getElementById('likeButton');
-    likeButton.classList.toggle('liked');
-  }
-</script>
 </html>
