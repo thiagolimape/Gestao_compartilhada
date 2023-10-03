@@ -1,108 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Gestor Ágil</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="carousel.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Login</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #07012b, #303866);;
+}
 
-    <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-        }
+.container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        .containerr {
-            background-color: #fff;
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            min-height: 100vh; /* Define a altura mínima do container para preencher a tela inteira. */
-        }
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-        h1 {
-            text-align: center;
-        }
+.logo img {
+  max-width: 100px;
+  height: auto;
+}
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
+.login-box {
+  text-align: center;
+}
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #07012b;
+}
 
-        button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #07012b;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.textbox {
+  position: relative;
+  margin-bottom: 20px;
+}
 
-        /* Estilos para o rodapé responsivo */
+.textbox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
 
-    </style>
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-image: url('eye-icon.png');
+  background-size: cover;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background: #07012b;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #504e5c;
+}
+
+.forgot-password {
+  display: block;
+  margin-bottom: 20px;
+  color: #07012b;
+  text-decoration: none;
+}
+
+.register-text {
+  margin-top: 20px;
+}
+
+.register-link {
+  color: #07012b;
+  text-decoration: none;
+}
+
+.custom-button {
+    width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background: #07012b;
+  cursor: pointer;
+  font-size: 16px;
+}
+.custom-button:hover {
+  background: #504e5c;
+}
+
+  </style>
 </head>
 <body>
-
-<header>
-    <img class="header-logo" src="image-removebg-preview.png" alt="Logo">
-    <h1>Gestor Ágil</h1>
-</header>
-
-<nav>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">Página Inicial</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="login.html">Entrar</a>
-        </li>
-    </ul>
-</nav>
-
-<hr class="featurette-divider">
-<div class="containerr">
-    <h1>Entrar</h1>
-    
-    <form id="login-form" action="processar_login.php" method="POST">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required>
-
-        <p><a class="btn btn-secondary" href="submit.html">Entrar&raquo;</a></p>
-    </form>
-
-    <div class="signup-link">
-        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
-    </div>
-
-</div>
-<hr class="featurette-divider">
-<footer class="footer mt-auto py-3">
     <div class="container">
-        <p>&copy; 2023 Gestão Participativa Ltda. Por Thiago Lima</p>
-    </div>
-</footer>
+        <header>
+          <a href="#" class="logo"><img src="gestor 2.png" alt="Logo"></a>
+          <p>Bem-vindo ao nosso site. Faça login para continuar.</p>
+        </header>
+        <div class="login-box">
+          <h2>Login</h2>
+          <form action="#">
+            <div class="textbox">
+              <input type="text" placeholder="Nome de usuário" name="username" required>
+            </div>
+            <div class="textbox">
+              <input type="password" placeholder="Senha" name="password" id="password" required>
+              <span class="toggle-password" onclick="togglePasswordVisibility()"></span>
+            </div>
+            <label for="remember">
+              <input type="checkbox" id="remember" name="remember"> Lembrar senha
+            </label>
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            <input type="submit" class="btn" value="Entrar" formaction="submit.html">
+          </form>
+          <p class="register-text">Ainda não tem uma conta Ágil? </p>
+          <button class="custom-button" href="cadastro.html">Cadastre-se</button>
+        </div>
+      </div>
+      
+    
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script>
+    function togglePasswordVisibility() {
+      var passwordField = document.getElementById("password");
+      passwordField.type = passwordField.type === "password" ? "text" : "password";
+    }
+  </script>
 </body>
 </html>

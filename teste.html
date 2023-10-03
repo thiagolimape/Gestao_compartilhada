@@ -1,92 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
+    <title>Gestão Participativa</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entre ou Cadastre-se</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="carousel.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
     <style>
-      body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+        .profile-image {
+            width: 30px; /* Ajuste o tamanho conforme necessário */
+            height: 30px; /* Ajuste o tamanho conforme necessário */
+            margin-left: 5px; /* Ajuste o espaçamento conforme necessário */
+            border-radius: 50%; /* Para tornar a imagem circular */
+        }
 
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
 
-.container h1 {
-    margin-bottom: 20px;
-}
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
 
-.login-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        .featurette-divider {
+            margin: 30px 0;
+        }
 
-.login-form button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        .featurette-heading {
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-.login-form button:hover {
-    background-color: #45a049;
-}
+        .lead {
+            font-size: 18px;
+        }
 
-.signup-link {
-    margin-top: 20px;
-}
+        .header-logo {
+            max-width: 200%;
+            height: auto;
+        }
 
-.signup-link a {
-    color: #007BFF;
-    text-decoration: none;
-}
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
 
-.signup-link a:hover {
-    text-decoration: underline;
-}
+        .profile-image img {
+            border-radius: 0%; /* Para tornar a imagem redonda (opcional) */
+            margin-left: 10px; /* Espaço entre o botão e a imagem */
+        }
 
+        .navbar-brand img {
+            max-width: 100%;
+            height: auto;
+        }
 
+        .navbar .navbar-nav {
+            flex-direction: row;
+        }
+
+        .navbar .nav-item {
+            margin-right: 10px;
+        }
+
+        .navbar .navbar-toggler {
+            order: -1;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Entre ou Cadastre-se</h1>
-
-        <!-- Formulário de Login -->
-        <div class="login-form">
-            <h2>Login</h2>
-            <form action="login.html" method="post">
-                <label for="username">Nome de usuário:</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
-
-                <button type="submit">Entrar</button>
-            </form>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="gestor.png" alt="Bootstrap" width="200" height="100">
+            </a>
+            <ul class="nav nav-underline">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Página Inicial</a>
+                </li>
+            </ul>
+            <div class="user-profile">
+                <a href="login.html" class="btn btn-outline-primary">Entrar</a>
+                <div class="profile-image">
+                    <img src="login.png" alt="Profile" width="30" height="30">
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <!-- Link para a página de cadastro -->
-        <div class="signup-link">
-            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
-        </div>
+    <hr class="featurette-divider">
+
+    <div class="container marketing">
+        <!-- Resto do conteúdo... -->
     </div>
+
+    <hr class="featurette-divider">
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <p class="text-center">&copy; 2023 Gestão Participativa Ltda. Por Thiago Lima</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
