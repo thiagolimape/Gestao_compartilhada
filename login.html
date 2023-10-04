@@ -115,16 +115,28 @@ label {
   background: #504e5c;
 }
 
+
+  .custom-button {
+    background-color: #07012b; /* Cor azul */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda padrão do botão */
+    text-align: center; /* Alinha o texto no centro do botão */
+    text-decoration: none; /* Remove sublinhado do texto */
+    display: inline-block; /* Permite configurar largura e altura */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor ao passar por cima do botão */
+  }
   </style>
 </head>
 <body>
     <div class="container">
         <header>
-          <a href="#" class="logo"><img src="gestor 2.png" alt="Logo"></a>
+          <a href="index.html" class="logo"><img src="gestor 2.png" alt="Logo"></a>
           <p>Bem-vindo ao nosso site. Faça login para continuar.</p>
         </header>
         <div class="login-box">
-          <h2>Login</h2>
+          <h2>Entrar</h2>
           <form action="#">
             <div class="textbox">
               <input type="text" placeholder="Nome de usuário" name="username" required>
@@ -140,7 +152,8 @@ label {
             <input type="submit" class="btn" value="Entrar" formaction="submit.html">
           </form>
           <p class="register-text">Ainda não tem uma conta Ágil? </p>
-          <button class="custom-button" href="cadastro.html">Cadastre-se</button>
+          <a class="custom-button" href="cadastro.html">Cadastre-se</a>
+
         </div>
       </div>
       

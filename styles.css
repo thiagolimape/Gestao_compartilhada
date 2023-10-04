@@ -294,3 +294,8 @@ section {
     align-items: center;
 }
 
+.nav-underline .nav-link.active, .nav-underline .show>.nav-link {
+    font-weight: 700;
+    color: #fff;
+    border-bottom-color: currentcolor;
+}
