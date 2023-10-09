@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votar em Sugestões</title>
+    <title>Enviar Sugestão</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -17,21 +17,26 @@
     </nav>
 
     <div class="container mt-4">
-        <h1 class="text-center">Votar em Sugestões</h1>
-
-        <div id="suggestionCarousel" class="carousel slide mt-4" data-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Aqui serão inseridos os cards das sugestões -->
+        <h1 class="text-center">Envio de Sugestão</h1>
+        <form id="suggestionForm">
+            <div class="form-group">
+                <label for="sector">Setor:</label>
+                <select class="form-control" id="sector">
+                    <option value="Recursos Humanos">Recursos Humanos</option>
+                    <option value="Departamento Pessoal">Departamento Pessoal</option>
+                    <option value="Logística">Logística</option>
+                </select>
             </div>
-            <a class="carousel-control-prev" href="#suggestionCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#suggestionCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
-        </div>
+            <div class="form-group">
+                <label for="title">Título da Sugestão:</label>
+                <input type="text" class="form-control" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="suggestionText">Texto da Sugestão:</label>
+                <textarea class="form-control" id="suggestionText" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
     </div>
 
     <footer class="footer py-3">

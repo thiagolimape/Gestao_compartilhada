@@ -1,106 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Gestão Participativa</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Sugestão</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-   
-    <style>
-      body {
-          font-family: 'Poppins', sans-serif;
-      }
-      header {
-          background-color: #007BFF;
-          color: white;
-          text-align: center;
-          padding: 20px;
-      }
-      
-      
-      .featurette-divider {
-          margin: 30px 0;
-      }
-      .featurette-heading {
-          font-size: 28px;
-          font-weight: bold;
-      }
-      .lead {
-          font-size: 18px;
-      }
-      
-     
-      .header-logo {
-          max-width: 200%;
-          height: auto;
-      }
-     
-      .user-profile {
-  display: flex;
-  align-items: center;
-}
-
-.profile-image img {
-  border-radius: 0%; /* Para tornar a imagem redonda (opcional) */
-  margin-left: 10px; /* Espaço entre o botão e a imagem */
-}
-
-  </style>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-    
-    <nav class="navbar bg-body-tertiary">
-        <div class="container d-flex justify-content-between align-items-center">
-          <a class="navbar-brand" href="indexfun.html">
-            <img src="gestor.png" alt="Bootstrap" width="200" height="100">
-          </a>
-          <ul class="nav nav-underline">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="submit.html">Enviar Sugestão</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="top.html">Melhores Sugestões</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="vote.html">Votar em Sugestões</a>
-            </li>
-          </ul>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="indexfun.html">
+        <img src="gestor.png" alt="Bootstrap" width="200" height="100">
+      </a>
+      <ul class="nav nav-underline">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="submit.html">Enviar Sugestão</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="vote.html">Votar em Sugestões</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="top.html">Melhores Sugestões</a>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container mt-4">
+        <h1 class="text-center">Envio de Sugestão</h1>
+        <form id="suggestionForm">
+            <div class="form-group">
+                <label for="sector">Setor:</label>
+                <select class="form-control" id="sector">
+                    <option value="Recursos Humanos">Recursos Humanos</option>
+                    <option value="Departamento Pessoal">Departamento Pessoal</option>
+                    <option value="Logística">Logística</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="title">Título da Sugestão:</label>
+                <input type="text" class="form-control" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="suggestionText">Texto da Sugestão:</label>
+                <textarea class="form-control" id="suggestionText" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Modal de confirmação -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body" id="modalBody">
+                  Sua sugestão foi enviada para o gestor, e os demais colaboradores já podem ver a sua sugestão.
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" onclick="redirectToSubmit()">Enviar outra sugestão</button>
+                  <a href="vote.html" class="btn btn-link">Ver a sua sugestão</a>
+              </div>
           </div>
-        </div>
-      </nav>
+      </div>
+  </div>
 
-<hr class="featurette-divider">
- 
-<section>
-    <h2>Enviar Sugestão</h2>
-    <div class="suggestion-form">
-        <label for="sector">Setor:</label>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Seleciono o setor</option>
-            <option value="1">Recursos Humanos</option>
-            <option value="2">Departamento Pessoal</option>
-            <option value="3">Logística</option>
-          </select>
-        <label for="title">Título da Sugestão:</label>
-        <input type="text" id="title" name="title" required>
-        <label for="suggestion">Sugestão:</label>
-        <textarea id="suggestion" name="suggestion" rows="4" required></textarea>
-        <button class="button-1" type="submit">Enviar</button>
+    <footer class="footer py-3">
+      <div class="container text-center">
+        <p>&copy; 2023 Gestão Participativa Ltda. Por Thiago Lima</p>
     </div>
-</section>
+    </footer>
 
-<hr class="featurette-divider">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
-<footer class="footer mt-auto py-3">
-    <div class="container">
-        <p class="text-center">&copy; 2023 Gestão Participativa Ltda. Por Thiago Lima</p>
-    </div>
-</footer>
+    <script>
+        function submitSuggestion(event) {
+            event.preventDefault();
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            const sector = document.getElementById('sector').value;
+            const title = document.getElementById('title').value;
+            const suggestionText = document.getElementById('suggestionText').value;
+
+            const suggestion = {
+                sector: sector,
+                title: title,
+                suggestionText: suggestionText
+            };
+
+            let existingSuggestions = JSON.parse(localStorage.getItem('suggestions')) || [];
+            existingSuggestions.push(suggestion);
+
+            localStorage.setItem('suggestions', JSON.stringify(existingSuggestions));
+
+            document.getElementById('sector').value = 'Recursos Humanos';
+            document.getElementById('title').value = '';
+            document.getElementById('suggestionText').value = '';
+
+            $('#confirmationModal').modal('show');
+        }
+
+        document.getElementById('suggestionForm').addEventListener('submit', submitSuggestion);
+    </script>
 </body>
+
 </html>

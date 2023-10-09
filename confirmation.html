@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votar em Sugestões</title>
+    <title>Confirmação de Envio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -17,21 +17,11 @@
     </nav>
 
     <div class="container mt-4">
-        <h1 class="text-center">Votar em Sugestões</h1>
-
-        <div id="suggestionCarousel" class="carousel slide mt-4" data-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Aqui serão inseridos os cards das sugestões -->
-            </div>
-            <a class="carousel-control-prev" href="#suggestionCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#suggestionCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
+        <div class="alert alert-success" role="alert">
+            Sua sugestão foi enviada para o gestor. Os demais colaboradores já podem ver a sua sugestão.
         </div>
+        <a href="submit.html" class="btn btn-primary">Enviar outra sugestão</a>
+        <a href="vote.html" class="btn btn-link">Ver a sua sugestão</a>
     </div>
 
     <footer class="footer py-3">
@@ -47,9 +37,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-
-    <!-- Seu script para integração de sugestões será colocado aqui -->
-    <script src="integration_script.js"></script> <!-- Arquivo para a integração -->
 </body>
 
 </html>

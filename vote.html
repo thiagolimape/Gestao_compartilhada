@@ -4,163 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão Participativa</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-        crossorigin="anonymous">
+    <title>Votar em Sugestões</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh; /* Garante que o conteúdo ocupe pelo menos toda a altura da tela. */
-            position: relative;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .card {
-            border: 1px solid #ccc;
-            padding: 50px; /* Aumenta o padding para aumentar o tamanho dos cards. */
-            margin: 20px; /* Aumenta a margem para separar os cards. */
-            cursor: pointer;
-            max-width: 300px; /* Ajusta a largura máxima dos cards. */
-        }
-
-        .card:hover {
-            background-color: #f0f0f0;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.4);
-            padding-top: 60px;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .comments {
-            margin-top: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-        }
-
-        #commentInput {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-
-        #commentList {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #commentList li {
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-        }
-        .like-icon {
-            color: black; /* Cor inicial do ícone de "gostei" */
-            transition: color 0.3s ease-in-out; /* Efeito de transição de cor ao clicar */
-            margin-right: 5px; /* Espaçamento entre o ícone e o texto do botão */
-        }
-
-        .like-icon.liked {
-            color: red; /* Cor quando o botão é clicado (gostei) */
-        }    
-
-    </style>
 </head>
 
 <body>
-
     <nav class="navbar bg-body-tertiary">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand" href="indexfun.html">
-                <img src="gestor.png" alt="Bootstrap" width="200" height="100">
-            </a>
-            <ul class="nav nav-underline">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="submit.html">Enviar Sugestão</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="top.html">Melhores Sugestões</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="vote.html">Votar em Sugestões</a>
-                </li>
-            </ul>
+          <a class="navbar-brand" href="indexfun.html">
+            <img src="gestor.png" alt="Bootstrap" width="200" height="100">
+          </a>
+          <ul class="nav nav-underline">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="submit.html">Enviar Sugestão</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="vote.html">Votar em Sugestões</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="top.html">Melhores Sugestões</a>
+            </li>
+          </ul>
+          </div>
         </div>
-    </nav>
-    <h1 class="text-center mt-4">Votar em Sugestões</h1>
-    <div class="container">
-        <div class="card">
-            <h4>Sugestão 1</h4>
-            <button class="btn btn-primary" onclick="openSuggestion('Sugestão 1')">Ver Sugestão</button>
-        </div>
-        <div class="card">
-            <h4>Sugestão 2</h4>
-            <button class="btn btn-primary" onclick="openSuggestion('Sugestão 2')">Ver Sugestão</button>
-        </div>
-        <div class="card">
-            <h4>Sugestão 3</h4>
-            <button class="btn btn-primary" onclick="openSuggestion('Sugestão 3')">Ver Sugestão</button>
-        </div>
-    </div>
+      </nav>
 
-    <div id="suggestionModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeSuggestion()">&times;</span>
-            <h2 id="suggestionTitle"></h2>
-            <p id="suggestionText"></p>
-            <button onclick="likeSuggestion()" class="btn btn-primary">Curtir</button>
-            <div class="comments">
-                <textarea id="commentInput" placeholder="Adicione um comentário"></textarea>
-                <button onclick="addComment()" class="btn btn-primary">Comentar</button>
-                <ul id="commentList"></ul>
+      <div class="container mt-4">
+        <h1 class="text-center">Votar em Sugestões</h1>
+
+        <div id="suggestionCarousel" class="carousel slide mt-4" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Sugestões aparecerão aqui -->
             </div>
+            <a class="carousel-control-prev" href="#suggestionCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#suggestionCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
         </div>
     </div>
 
@@ -170,58 +54,7 @@
         </div>
     </footer>
 
-    <script>
-        function openSuggestion(title) {
-            const suggestionTitle = document.getElementById('suggestionTitle');
-            const suggestionText = document.getElementById('suggestionText');
-            const modal = document.getElementById('suggestionModal');
-            const likeButton = document.querySelector('.modal-content button');
-            likeButton.innerHTML = '<i class="like-icon">&#x2661;</i>Curtir';
-
-            suggestionTitle.textContent = title;
-            suggestionText.textContent = 'Texto da sugestão ' + title;
-
-            modal.style.display = 'block';
-        }
-
-        function closeSuggestion() {
-            const modal = document.getElementById('suggestionModal');
-            modal.style.display = 'none';
-        }
-
-        function likeSuggestion() {
-            alert('Sugestão curtida!');
-        }
-
-        function addComment() {
-            const commentInput = document.getElementById('commentInput');
-            const commentText = commentInput.value;
-
-            if (commentText.trim() !== '') {
-                const commentList = document.getElementById('commentList');
-                const newComment = document.createElement('li');
-                newComment.textContent = commentText;
-                commentList.appendChild(newComment);
-                commentInput.value = '';
-            }
-        }
-
-        function addComment() {
-            const commentInput = document.getElementById('commentInput');
-            const commentText = commentInput.value;
-
-            if (commentText.trim() !== '') {
-                const commentList = document.getElementById('commentList');
-                const newComment = document.createElement('li');
-                newComment.textContent = commentText;
-                commentList.appendChild(newComment);
-                commentInput.value = '';
-            }
-        }
-    </script>
-
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -230,6 +63,37 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
+    <script>
+        function displaySuggestions() {
+            const suggestionCarouselInner = document.querySelector('#suggestionCarousel .carousel-inner');
+            suggestionCarouselInner.innerHTML = '';
+
+            const storedSuggestions = JSON.parse(localStorage.getItem('suggestions')) || [];
+
+            for (let i = 0; i < storedSuggestions.length; i++) {
+                const activeClass = i === 0 ? 'active' : '';
+                const suggestion = storedSuggestions[i];
+
+                const card = `
+                    <div class="carousel-item ${activeClass}">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">${suggestion.title}</h5>
+                                <p class="card-text">${suggestion.suggestionText}</p>
+                                <button class="btn btn-primary" onclick="openSuggestionDetails(${i})">Ver Sugestão</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                suggestionCarouselInner.innerHTML += card;
+            }
+        }
+
+        displaySuggestions();
+    </script>
 </body>
 
 </html>
+
