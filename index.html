@@ -6,113 +6,178 @@
     <link href="carousel.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    
    
     <style>
-        .profile-image {
-    width: 30px; /* Ajuste o tamanho conforme necessário */
-    height: 30px; /* Ajuste o tamanho conforme necessário */
-    margin-left: 5px; /* Ajuste o espaçamento conforme necessário */
-    border-radius: 50%; /* Para tornar a imagem circular */
-}
+      .footer-divider {
+            border-top: 1px solid #007BFF; /* Cor azul #007BFF para a linha */
+            margin-top: 20px; /* Espaçamento superior */
+        }
+      .profile-image {
+            width: 20px; /* Ajuste o tamanho conforme necessário */
+            height: 20px; /* Ajuste o tamanho conforme necessário */
+            margin-left: 5px; /* Ajuste o espaçamento conforme necessário */
+            border-radius: 50%; /* Faça a imagem circular */
+        }
 
-      body {
-          font-family: 'Poppins', sans-serif;
-      }
-      header {
-          background-color: #007BFF;
-          color: white;
-          text-align: center;
-          padding: 20px;
-      }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
       
+        .featurette-divider {
+            margin: 15px 0;
+        }
       
-      .featurette-divider {
-          margin: 30px 0;
-      }
-      .featurette-heading {
-          font-size: 28px;
-          font-weight: bold;
-      }
-      .lead {
-          font-size: 18px;
-      }
+        .featurette-heading {
+            font-size: 24px;
+            font-weight: bold;
+        }
       
-     
-      .header-logo {
-          max-width: 200%;
-          height: auto;
-      }
-     
-      .user-profile {
-  display: flex;
-  align-items: center;
+        .lead {
+            font-size: 16px;
+        }
+      
+        .header-logo {
+            max-width: 150%; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+        }
+      
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+      
+        .profile-image img {
+            border-radius: 0%; /* Faça a imagem redonda (opcional) */
+            margin-left: 0px; /* Espaço entre o botão e a imagem */
+        }
+      
+        .nav-underline .nav-link.active, .nav-underline .show > .nav-link {
+            font-weight: 700;
+            color: #fff;
+            border-bottom-color: currentcolor;
+        }
+      
+        .btn-outline-primary {
+          --bs-btn-color: #f8f9fa;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #07012b;
+  --bs-btn-hover-border-color: #07012b;
+  --bs-btn-focus-shadow-rgb: 13,110,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #07012b;
+  --bs-btn-active-border-color: #07012b;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #07012b;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #07012b;
+  --bs-gradient: none;
+        }
+      
+        footer {
+            width: 100%;
+            background-color: #07012b; /* Ajuste a cor conforme necessário */
+            color: white;
+            padding: 20px; /* Ajuste o preenchimento conforme necessário */
+        }
+      
+        .footer-content {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+      
+        .footer-content img {
+            max-width: 30px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+        }
+      
+        .footer-content .text {
+            font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+    
+        }
+
+        .footer-content .footer-form input, .footer-content .footer-form textarea {
+    font-size: 12px; /* Tamanho do texto no formulário */
 }
 
-.profile-image img {
-  border-radius: 0%; /* Para tornar a imagem redonda (opcional) */
-  margin-left: 0px; /* Espaço entre o botão e a imagem */
+.footer-content .footer-form button {
+    padding: 4px 10px; /* Espaçamento interno do botão no formulário */
+    font-size: 12px; /* Tamanho do texto no botão */
 }
 
-.nav-underline .nav-link.active, .nav-underline .show>.nav-link {
-    font-weight: 700;
-    color: #fff;
-    border-bottom-color: currentcolor;
+.footer-content .footer-form .form-control {
+    height: 25px; /* Altura dos campos de entrada no formulário */
 }
 
-.btn-outline-primary {
-    --bs-btn-color: #f8f9fa;
-    --bs-btn-border-color: #fff;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #07012b;
-    --bs-btn-hover-border-color: #07012b;
-    --bs-btn-focus-shadow-rgb: 13,110,253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #07012b;
-    --bs-btn-active-border-color: #07012b;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #07012b;
-    --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: #07012b;
-    --bs-gradient: none;
+/* Reduzindo o tamanho do footer */
+footer {
+    padding: 10px; /* Ajuste o preenchimento conforme necessário */
 }
 
+h2 {
+    font-size: 18px; /* Tamanho menor para h2 */
+}
+.footer-content img {
+    max-width: 50%; /* Adjusted maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+.patrocinadores {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-  </style>
+        .sebrae-logo {
+            max-width: 200px; /* Ajuste o tamanho conforme necessário */
+            height: auto; /* Mantenha a proporção da imagem */
+        }
 
+        .patrocinadores {
+            display: flex;
+            flex-direction: row; /* Alterado para exibir lado a lado */
+            align-items: center;
+        }
+
+        .patrocinador {
+            margin-right: 0; /* Removido a margem para ficarem lado a lado */
+        }
+    </style>
+    
+  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     
     <nav class="navbar bg-body-tertiary">
         <div class="container d-flex justify-content-between align-items-center">
-          <a class="navbar-brand" href="#">
-            <img src="gestor.png" alt="Bootstrap" width="200" height="100">
-          </a>
-          <ul class="nav nav-underline">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Página Inicial</a>
-            </li>
-          </ul>
-          <div class="user-profile">
-            <a href="login.html" class="btn btn-outline-primary">Entre ou Cadastre-se</a>
-            <div class="profile-image">
-              <img src="login.png" alt="Profile" width="30" height="30">
+            <a class="navbar-brand" href="#">
+                <img src="gestor.png" alt="Bootstrap" width="150" height="75"> <!-- Adjust the image size as needed -->
+            </a>
+            <ul class="nav nav-underline">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Página Inicial</a>
+                </li>
+            </ul>
+            <div class="user-profile">
+                <a href="login.html" class="btn btn-outline-primary">Entre ou Cadastre-se</a>
+                <div class="profile-image">
+                    <img src="login.png" alt="Profile" width="20" height="20"> <!-- Adjust the image size as needed -->
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
-      
-      
-      
-
-
-
-
-
-<hr class="featurette-divider">
+    </nav>
+  
+    <hr class="featurette-divider">
  
-<div class="container marketing">
-    <div class="row">
+    <div class="container marketing">
+      <div class="row">
         <div class="col-lg-4">
             <h2 class="fw-normal">Funcionarios Gestores</h2>
             <p>Faça parte da tomada de decisão em sua organização enviando sugestões de melhorias para o seu gestor.</p>
@@ -175,19 +240,88 @@
       </div>
     </div>
 </div>
-
-<hr class="featurette-divider">
-
-<footer class="footer mt-auto py-3">
-    <div class="container">
-        <p class="text-center">&copy; 2023 Gestão Participativa Ltda. Por Thiago Lima</p>
     </div>
-</footer>
+    <hr class="featurette-divider">
+    
+    <footer class="mt-5 pt-5" style="background-color: #07012b;">
+      <div class="container footer-content">
+          <div class="row justify-content-center text-white">
+              <div class="col-md-4 text-center">
+                  <img src="gestor.png" alt="Logo" width="100" height="50">
+                  <p>Transformando a gestão de SST de forma ágil e inovadora. 
+                      Promovemos ambientes de trabalho seguros e produtivos. </p>
+              </div>
+              <div class="col-md-4 text-center">
+                  <h2 class="h4"><strong>Endereço:</strong></h2>
+                  <div class="content">
+                      <div class="place">
+                          <i class="fas fa-map-marker"></i>
+                          <span class="text">R. Tabaiares, 360 - Ilha do Retiro, Recife</span>
+                      </div>
+                      <div class="phone">
+                          <i class="fas fa-phone-alt"></i>
+                          <span class="text">+55 81 9999-9999</span>
+                      </div>
+                      <div class="email">
+                          <i class="fas fa-envelope"></i>
+                          <span class="text">gestoragil@gmail.com</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 text-center">
+                  <h2 class="h4"><strong>Contato:</strong></h2>
+                  <div class="content">
+                      <form action="#" class="footer-form">
+                          <div class="mb-3">
+                              <input type="email" class="form-control" id="email" placeholder="Email" required>
+                          </div>
+                          <div class="mb-3">
+                              <textarea class="form-control" rows="2" id="message" placeholder="Mensagem" required></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-sm btn-primary">Enviar</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+  
+          <hr class="featurette-divider">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="h4 text-white"><strong>Patrocinadores:</strong></h2>
+                    <div class="d-flex justify-content-center patrocinadores">
+                        <div class="patrocinador">
+                            <img src="fundacentro.png" alt="Fundacentro" width="150" height="75">
+                        </div>
+                        <div class="patrocinador">
+                            <img src="sebrae.png" alt="Sebrae" width="200" height="75" class="sebrae-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+          
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+          <div class="row">
+              <div class="col text-center" style="background-color: #000216; padding: 20px; width: 100%; margin-top: 20px;">
+                  <div class="center">
+                      <span class="credit text-white">Criado por <a href="#" class="text-white">Thiago</a></span>
+                      <span class="far fa-copyright text-white">2023 Todos os direitos reservados</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+ 
+  
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
