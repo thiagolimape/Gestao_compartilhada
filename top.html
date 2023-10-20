@@ -1,176 +1,204 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão Participativa - Top Sugestões</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .button-5 {
-            background-color: #07012b;
-            color: white;
-            border: none;
-            padding: 0.5rem 0.5rem;
-            cursor: pointer;
-            border-radius: 100px;
-            font-size: 16px;
-        }
-        .button-5:hover {
-            background-color: #51585e;
-        }
-        /* Alinhar e centralizar nomes e adicionar fundo redondo aos números */
-        
-        .place {
-            background-color: #07012b;
-            color: white;
-            border-radius: 100%; /* Adicionar fundo redondo */
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            margin-right: 10px;
-            font-weight: bold;
-            font-size: 16px;
-        }
-      
-        .header-logo {
-          max-width: 200%;
-          height: auto;
-      }
-     
-      .user-profile {
-  display: flex;
-  align-items: center;
-}
-
-.profile-image img {
-  border-radius: 0%; /* Para tornar a imagem redonda (opcional) */
-  margin-left: 10px; /* Espaço entre o botão e a imagem */
-}
- 
-       
-    </style>
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container d-flex justify-content-between align-items-center">
-          <a class="navbar-brand" href="indexfun.html">
-            <img src="gestor.png" alt="Bootstrap" width="200" height="100">
-          </a>
-          <ul class="nav nav-underline">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="submit.html">Enviar Sugestão</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="vote.html">Votar em Sugestões</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="top.html">Melhores Sugestões</a>
-            </li>
-          </ul>
-          </div>
+            <a class="navbar-brand" href="indexfun.html">
+                <img src="gestor.png" alt="Bootstrap" width="200" height="100">
+            </a>
+            <ul class="nav nav-underline">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="submit.html">Enviar Sugestão</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="vote.html">Votar em Sugestões</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="top.html">Melhores Sugestões</a>
+                </li>
+            </ul>
         </div>
-      </nav>
+    </nav>
 
     <hr class="featurette-divider">
-    <div class="content">
+    <div class="container text-center my-5">
         <h2>Top Sugestões</h2>
-        <div class="podium">
-            <div class="place">1º</div>
-            <div class="top-suggestion">
-                <p>Utilização do Método Ágil</p>
-                <span>15 votos</span>
-                <button class="button-5">Conhecer Sugestão</button>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">1º Lugar</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Utilização do Método Ágil</h6>
+                        <p class="card-text">Esta sugestão recebeu 15 votos.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sugestao1">
+                            Conhecer Sugestão
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">2º Lugar</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Alugar um espaço de coworking</h6>
+                        <p class="card-text">Esta sugestão recebeu 12 votos.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#sugestao2">
+                            Conhecer Sugestão
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">3º Lugar</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Máquina de café para os funcionários</h6>
+                        <p class="card-text">Esta sugestão recebeu 10 votos.</p>
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#sugestao3">
+                            Conhecer Sugestão
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="podium">
-            <div class="place">2º</div>
-            <div class="top-suggestion">
-                <p>Alugar um espaço de coworking</p>
-                <span>12 votos</span>
-                <button class="button-5">Conhecer Sugestão</button>
+    </div>
+
+    <!-- Modal para Sugestão 1 -->
+    <div class="modal fade" id="sugestao1" tabindex="-1" aria-labelledby="sugestao1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sugestao1Label">Sugestão 1: Utilização do Método Ágil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Esta sugestão propõe a implementação do método ágil para aumentar a eficiência nos processos de gestão.
+                    </p>
+                    <!-- Adicione mais detalhes sobre a sugestão aqui -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
             </div>
         </div>
-        <div class="podium">
-            <div class="place">3º</div>
-            <div class="top-suggestion">
-                <p>Máquina de café para os funcionários</p>
-                <span>10 votos</span>
-                <button class="button-5">Conhecer Sugestão</button>
+    </div>
+
+    <!-- Modal para Sugestão 2 -->
+    <div class="modal fade" id="sugestao2" tabindex="-1" aria-labelledby="sugestao2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sugestao2Label">Sugestão 2: Alugar um espaço de coworking</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Esta sugestão propõe o aluguel de um espaço de coworking para promover a colaboração e a produtividade da equipe.
+                    </p>
+                    <!-- Adicione mais detalhes sobre a sugestão aqui -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Sugestão 3 -->
+    <div class="modal fade" id="sugestao3" tabindex="-1" aria-labelledby="sugestao3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sugestao3Label">Sugestão 3: Máquina de café para os funcionários</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Esta sugestão sugere a instalação de uma máquina de café para melhorar o bem-estar dos funcionários.
+                    </p>
+                    <!-- Adicione mais detalhes sobre a sugestão aqui -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
             </div>
         </div>
     </div>
 
     <footer class="mt-5 pt-5" style="background-color: #07012b;">
-      <div class="container footer-content">
-          <div class="row justify-content-center text-white">
-              <div class="col-md-4 text-center">
-                  <img src="gestor.png" alt="Logo" width="100" height="50">
-                  <p>Transformando a gestão de SST de forma ágil e inovadora. 
-                      Promovemos ambientes de trabalho seguros e produtivos. </p>
-              </div>
-              <div class="col-md-4 text-center">
-                  <h2 class="h4"><strong>Endereço:</strong></h2>
-                  <div class="content">
-                      <div class="place">
-                          <i class="fas fa-map-marker"></i>
-                          <span class="text">R. Tabaiares, 360 - Ilha do Retiro, Recife</span>
-                      </div>
-                      <div class="phone">
-                          <i class="fas fa-phone-alt"></i>
-                          <span class="text">+55 81 9999-9999</span>
-                      </div>
-                      <div class="email">
-                          <i class="fas fa-envelope"></i>
-                          <span class="text">gestoragil@gmail.com</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-4 text-center">
-                  <h2 class="h4"><strong>Contato:</strong></h2>
-                  <div class="content">
-                      <form action="#" class="footer-form">
-                          <div class="mb-3">
-                              <input type="email" class="form-control" id="email" placeholder="Email" required>
-                          </div>
-                          <div class="mb-3">
-                              <textarea class="form-control" rows="2" id="message" placeholder="Mensagem" required></textarea>
-                          </div>
-                          <button type="submit" class="btn btn-sm btn-primary">Enviar</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-  
-          <hr class="featurette-divider">
+        <div class="container text-white">
             <div class="row">
-                <div class="col text-center">
-                    <h2 class="h4 text-white"><strong>Patrocinadores:</strong></h2>
-                    <div class="d-flex justify-content-center patrocinadores">
-                        <div class="patrocinador">
-                            <img src="fundacentro.png" alt="Fundacentro" width="150" height="75">
+                <div class="col-md-4 text-center">
+                    <img src="gestor.png" alt="Logo" width="100" height="50">
+                    <p>Transformando a gestão de SST de forma ágil e inovadora. 
+                        Promovemos ambientes de trabalho seguros e produtivos.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h2 class="h4"><strong>Endereço:</strong></h2>
+                    <div class="place">
+                        <i class="fas fa-map-marker"></i>
+                        <span class="text">R. Tabaiares, 360 - Ilha do Retiro, Recife</span>
+                    </div>
+                    <div class="place">
+                        <i class="fas fa-phone-alt"></i>
+                        <span class="text">+55 81 9999-9999</span>
+                    </div>
+                    <div class="place">
+                        <i class="fas fa-envelope"></i>
+                        <span class="text">gestoragil@gmail.com</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h2 class="h4"><strong>Contato:</strong></h2>
+                    <form action="#" class="footer-form">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
                         </div>
-                        <div class="patrocinador">
-                            <img src="sebrae.png" alt="Sebrae" width="200" height="75" class="sebrae-logo">
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="2" id="message" placeholder="Mensagem" required></textarea>
                         </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="h4"><strong>Patrocinadores:</strong></h2>
+                <div class="d-flex justify-content-center patrocinadores">
+                    <div class="patrocinador">
+                        <img src="fundacentro.png" alt="Fundacentro" width="100" height="50">
+                    </div>
+                    <div class="patrocinador">
+                        <img src="sebrae.png" alt="Sebrae" width="100" height="50" class="sebrae-logo">
                     </div>
                 </div>
             </div>
-            <hr class="featurette-divider">
-          
+        </div>
+        <hr class="featurette-divider">
 
-          <div class="row">
-              <div class="col text-center" style="background-color: #000216; padding: 20px; width: 100%; margin-top: 20px;">
-                  <div class="center">
-                      <span class="credit text-white">Criado por <a href="#" class="text-white">Thiago</a></span>
-                      <span class="far fa-copyright text-white">2023 Todos os direitos reservados</span>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </footer>
+        <div class="row">
+            <div class "col text-center" style="background-color: #000216; padding: 20px; width: 100%; margin-top: 20px;">
+                <div class="center">
+                    <span class="credit text-white">Criado por <a href="#" class="text-white">Thiago</a></span>
+                    <span class="far fa-copyright text-white">2023 Todos os direitos reservados</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
-

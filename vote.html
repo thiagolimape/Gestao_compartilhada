@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +7,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container d-flex justify-content-between align-items-center">
-          <a class="navbar-brand" href="indexfun.html">
-            <img src="gestor.png" alt="Bootstrap" width="200" height="100">
-          </a>
-          <ul class="nav nav-underline">
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="submit.html">Enviar Sugestão</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="vote.html">Votar em Sugestões</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="top.html">Melhores Sugestões</a>
-            </li>
-          </ul>
-          </div>
+            <a class="navbar-brand" href="indexfun.html">
+                <img src="gestor.png" alt="Bootstrap" width="200" height="100">
+            </a>
+            <ul class="nav nav-underline">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="submit.html">Enviar Sugestão</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="vote.html">Votar em Sugestões</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="top.html">Melhores Sugestões</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-
-      <div class="container mt-4">
+    </nav>
+    
+    <div class="container mt-4">
         <h1 class="text-center">Votar em Sugestões</h1>
 
         <div id="suggestionCarousel" class="carousel slide mt-4" data-ride="carousel">
@@ -47,14 +44,12 @@
             </a>
         </div>
     </div>
-
     <footer class="mt-5 pt-5" style="background-color: #07012b;">
         <div class="container footer-content">
             <div class="row justify-content-center text-white">
                 <div class="col-md-4 text-center">
                     <img src="gestor.png" alt="Logo" width="100" height="50">
-                    <p>Transformando a gestão de SST de forma ágil e inovadora. 
-                        Promovemos ambientes de trabalho seguros e produtivos. </p>
+                    <p>Transformando a gestão de SST de forma ágil e inovadora. Promovemos ambientes de trabalho seguros e produtivos.</p>
                 </div>
                 <div class="col-md-4 text-center">
                     <h2 class="h4"><strong>Endereço:</strong></h2>
@@ -88,24 +83,23 @@
                     </div>
                 </div>
             </div>
-    
-            <hr class="featurette-divider">
-              <div class="row">
-                  <div class="col text-center">
-                      <h2 class="h4 text-white"><strong>Patrocinadores:</strong></h2>
-                      <div class="d-flex justify-content-center patrocinadores">
-                          <div class="patrocinador">
-                              <img src="fundacentro.png" alt="Fundacentro" width="150" height="75">
-                          </div>
-                          <div class="patrocinador">
-                              <img src="sebrae.png" alt="Sebrae" width="200" height="75" class="sebrae-logo">
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <hr class="featurette-divider">
             
-  
+            <hr class="featurette-divider">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="h4 text-white"><strong>Patrocinadores:</strong></h2>
+                    <div class="d-flex justify-content-center patrocinadores">
+                        <div class="patrocinador">
+                            <img src="fundacentro.png" alt="Fundacentro" width="150" height="75">
+                        </div>
+                        <div class="patrocinador">
+                            <img src="sebrae.png" alt="Sebrae" width="200" height="75" class="sebrae-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            
             <div class="row">
                 <div class="col text-center" style="background-color: #000216; padding: 20px; width: 100%; margin-top: 20px;">
                     <div class="center">
@@ -116,7 +110,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -126,37 +120,59 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-
+    
     <script>
         function displaySuggestions() {
             const suggestionCarouselInner = document.querySelector('#suggestionCarousel .carousel-inner');
             suggestionCarouselInner.innerHTML = '';
-
-            const storedSuggestions = JSON.parse(localStorage.getItem('suggestions')) || [];
-
-            for (let i = 0; i < storedSuggestions.length; i++) {
+    
+            // Exemplos de sugestões
+            const sampleSuggestions = [
+                {
+                    title: "Programa de Ergonomia no Local de Trabalho",
+                    suggestionText: "Implementar um programa de ergonomia para melhorar a postura dos funcionários, fornecendo cadeiras ergonômicas e mesas ajustáveis.",
+                    buttonColor: "btn-success" // Cor verde para o botão
+                },
+                {
+                    title: "Treinamento de Primeiros Socorros",
+                    suggestionText: "Oferecer treinamento de primeiros socorros para todos os funcionários, aumentando a capacidade de resposta em situações de emergência.",
+                    buttonColor: "btn-info" // Cor azul para o botão
+                },
+                {
+                    title: "Implementação de Espaços de Descanso",
+                    suggestionText: "Criar espaços de descanso acolhedores para os funcionários relaxarem e recarregarem durante o expediente.",
+                    buttonColor: "btn-warning" // Cor amarela para o botão
+                }
+            ];
+    
+            for (let i = 0; i < sampleSuggestions.length; i++) {
                 const activeClass = i === 0 ? 'active' : '';
-                const suggestion = storedSuggestions[i];
-
+                const suggestion = sampleSuggestions[i];
+    
                 const card = `
                     <div class="carousel-item ${activeClass}">
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">${suggestion.title}</h5>
                                 <p class="card-text">${suggestion.suggestionText}</p>
-                                <button class="btn btn-primary" onclick="openSuggestionDetails(${i})">Ver Sugestão</button>
+                                <button class="btn ${suggestion.buttonColor}" onclick="openSuggestionDetails(${i})">Ver Sugestão</button>
                             </div>
                         </div>
                     </div>
                 `;
-
+    
                 suggestionCarouselInner.innerHTML += card;
             }
         }
-
+    
         displaySuggestions();
     </script>
+
+    <script>
+        function openSuggestionDetails(index) {
+            const suggestionCarousel = document.getElementById('suggestionCarousel');
+            $(suggestionCarousel).carousel(index); // Move o carrossel para o índice selecionado
+        }
+    </script>
 </body>
-
 </html>
-
